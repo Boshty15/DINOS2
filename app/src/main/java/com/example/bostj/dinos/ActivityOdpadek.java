@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.DataAll;
 import com.example.Lokacija;
+import com.example.VrstaOdpadkaCenaKolicina;
 import com.example.VrstaOdpadkov;
 
 import java.util.Calendar;
@@ -31,7 +32,7 @@ public class ActivityOdpadek extends AppCompatActivity {
     EditText edName;
     VrstaOdpadkov v;
     SeekBar simpleSeekBar;
-    TextView txtCenaSkupaj;
+    EditText editTextCena;
 
 
     @Override
@@ -43,27 +44,23 @@ public class ActivityOdpadek extends AppCompatActivity {
         ivSlika =(ImageView) findViewById(R.id.imageViewMain);
         edCena = (EditText)findViewById(R.id.txtCena);
         edName = (EditText)findViewById(R.id.editTextName);
-        txtCenaSkupaj = (TextView)findViewById(R.id.txtCena);
+        editTextCena = (EditText) findViewById(R.id.editTextCena);
         update(app.getTestVrstaOdpadkov());
 
         simpleSeekBar=(SeekBar)findViewById(R.id.seekBar);
-        // perform seek bar change listener event used for getting the progress value
         simpleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progressChangedValue = 0;
-
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progressChangedValue = progress;
-                //txtCenaSkupaj.setText(progressChangedValue);
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+                editTextCena.setText(String.valueOf(progress));
             }
 
+            @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
+
             }
 
+            @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(ActivityOdpadek.this, "Seek bar progress is :" + progressChangedValue,
-                        Toast.LENGTH_SHORT).show();
-
 
             }
         });
@@ -92,7 +89,13 @@ public class ActivityOdpadek extends AppCompatActivity {
         edName.setText(l.getOdpadek());
         edCena.setText(l.getCena() + "");
     }
+    public  void onClickAddKosarica(View v){
+        //VrstaOdpadkaCenaKolicina tmp = new VrstaOdpadkaCenaKolicina(, Double.parseDouble(edCena.getText().toString()), Double.parseDouble(editTextCena.getText().toString()));
+        Intent i = new Intent(getBaseContext(),ActivityVrstaOdpadkovList.class);
+        startActivity(i);
 
+
+    }
 
 
 }

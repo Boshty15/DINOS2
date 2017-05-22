@@ -7,10 +7,12 @@
     tools:context="com.example.bostj.dinos.ActivityZacetna">
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="784dp"
+        android:layout_height="1127dp"
         android:layout_weight="1"
-        tools:context="com.example.bostj.dinos.ActivityZacetna">
+        tools:context="com.example.bostj.dinos.ActivityZacetna"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
         <Button
             android:id="@+id/buttonLokacijeList"
@@ -34,8 +36,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5"
-            tools:layout_editor_absoluteX="192dp"
-            tools:layout_editor_absoluteY="81dp" />
+            tools:layout_editor_absoluteX="400dp"
+            tools:layout_editor_absoluteY="89dp" />
 
         <Button
             android:id="@+id/bttVrstaOdpadkov"

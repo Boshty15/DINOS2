@@ -5,7 +5,7 @@ package com.example;
  */
 
 public class VrstaOdpadkaCenaKolicina {
-    private VrstaOdpadkov vrstaOdpadkov;
+    private VrstaOdpadkov name;
     private double cena;
     private double kolicina;
 
@@ -13,18 +13,18 @@ public class VrstaOdpadkaCenaKolicina {
     @Override
     public String toString() {
         return "VrstaOdpadkaCenaKolicina{" +
-                "vrstaOdpadkov=" + vrstaOdpadkov +
+                "vrstaOdpadkov=" + name +
                 ", cena=" + cena +
                 ", kolicina=" + kolicina +
                 '}';
     }
 
     public VrstaOdpadkov getVrstaOdpadkov() {
-        return vrstaOdpadkov;
+        return name;
     }
 
-    public void setVrstaOdpadkov(VrstaOdpadkov vrstaOdpadkov) {
-        this.vrstaOdpadkov = vrstaOdpadkov;
+    public void setVrstaOdpadkov(VrstaOdpadkov name) {
+        this.name = name;
     }
 
     public double getCena() {
@@ -43,9 +43,9 @@ public class VrstaOdpadkaCenaKolicina {
         this.kolicina = kolicina;
     }
 
-    public VrstaOdpadkaCenaKolicina(VrstaOdpadkov vrstaOdpadkov, double cena, double kolicina) {
+    public VrstaOdpadkaCenaKolicina(VrstaOdpadkov name, double cena, double kolicina) {
 
-        this.vrstaOdpadkov = vrstaOdpadkov;
+        this.name = name;
         this.cena = cena;
         this.kolicina = kolicina;
     }

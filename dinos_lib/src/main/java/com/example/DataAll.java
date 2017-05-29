@@ -102,8 +102,8 @@ public class DataAll {
         da.addLocation(46.249529,15.2505651,"Celje Dinos",da.odpiralniCas, "051333555","infoCE@dinos.si");
         da.addLocation(46.5239278,15.6546989,"Maribor Dinos",da.odpiralniCas, "051333555","infoCE@dinos.si");
         da.addLocation(46.2560064,14.3196523,"Center za predelavo Naklo",da.odpiralniCas, "051333555","infoCE@dinos.si");
-        da.addLocation(45.527268,13.735005,"Skladišče Koper",da.odpiralniCas, "051111222","infoKP@dinos.si");
-        da.addLocation(46.5492122,16.4505,"Skladišče Lendava",da.odpiralniCas, "051111222","infoLendava@dinos.si");
+        da.addLocation(45.527268,13.735005,"Skladisce Koper",da.odpiralniCas, "051111222","infoKP@dinos.si");
+        da.addLocation(46.5492122,16.4505,"Skladisce Lendava",da.odpiralniCas, "051111222","infoLendava@dinos.si");
 
         da.addLocation(46.6682993,16.1742097,"Skladišče Murska Sobota",da.odpiralniCas, "051111222","infoKP@dinos.si");
         da.addLocation(46.0982974,14.5328824,"Skladišče Ptuj",da.odpiralniCas, "051111222","infoKP@dinos.si");

@@ -58,12 +58,12 @@ public class ApplicationMy extends Application {
     public void onCreate() {
         super.onCreate();
         x = 5;
-        /*if(load())
+        if(load())
             Log.i(TAG,"uspešeno naložena datoteka");
         else {
             Log.i(TAG, " NE uspešeno naložena datoteka");
             a= DataAll.scenarijA();
-        }*/
+        }
         a= DataAll.scenarijA();
         mLastLocation=null;
         if (!EventBus.getDefault().isRegistered(this))

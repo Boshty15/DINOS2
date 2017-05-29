@@ -35,6 +35,9 @@ public class ActivityVrstaOdpadkovList extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
     public  void onClickKosarica(View v){
+        //dodati izdelek v košarico
+
+
         Intent i = new Intent(getBaseContext(),activity_kosarica_list.class);
         startActivity(i);
     }

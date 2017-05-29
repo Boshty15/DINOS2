@@ -1,6 +1,7 @@
 package com.example.bostj.dinos;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -51,8 +52,9 @@ public class activity_kosarica_list extends AppCompatActivity {
 
         txtViewSkupajCena = (TextView) findViewById(R.id.txtViewSkupnaCena);
         double tmp = 0;
-        for (int i = 0; i < 3; i++) {
-            tmp += 50;
+        for (int i = 0; i < app.getSize(); i++) {
+            //tmp += 50;
+            tmp += app.getItem(i).getCena();
         }
         txtViewSkupajCena.setText(tmp + "");
         setDeleteOnSwipe(mRecyclerView);
@@ -142,5 +144,30 @@ public class activity_kosarica_list extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         mRecyclerView.getAdapter().notifyDataSetChanged();
+    }
+    public  void OnClickZbrisiVse(View v){
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        //Yes button clicked
+                        app.removeAll();
+                        txtViewSkupajCena.setText("0.0");
+                        app.save();
+                        mRecyclerView.getAdapter().notifyDataSetChanged();
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        //No button clicked
+                        mRecyclerView.getAdapter().notifyDataSetChanged();
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity_kosarica_list.this);
+        builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("No", dialogClickListener).show();
     }
 }

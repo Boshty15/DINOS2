@@ -108,6 +108,15 @@ public class ApplicationMy extends Application {
     public void removeLocationByPosition(int adapterPosition) {
         a.getKosaricaAll().remove(adapterPosition);
     }
+    public void removeAll() {
+        a.getKosaricaAll().clear();
+    }
+    public int getSize(){
+        return a.getSize();
+    }
+    public VrstaOdpadkaCenaKolicina getItem(int i){
+        return a.getItem(i);
+    }
     public boolean save() {
         File file = new File(this.getExternalFilesDir(DATA_MAP), ""
                 + FILE_NAME);

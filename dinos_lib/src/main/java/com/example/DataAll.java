@@ -170,5 +170,10 @@ public class DataAll {
     public int getVrstaOdpadkovKolicinaCenaSize() {
         return vrstaOdpadkaCenaKolicinas.size();
     }
-
+    public int getSize(){
+        return vrstaOdpadkaCenaKolicinas.size();
+    }
+    public VrstaOdpadkaCenaKolicina getItem(int i){
+        return vrstaOdpadkaCenaKolicinas.get(i);
+    }
 }

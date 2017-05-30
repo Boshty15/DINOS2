@@ -11,9 +11,20 @@ public class Lokacija {
     private String id;
     private double x,y; //gps lokacija
     private String naziv;
+    //private String naslov;
+    private Naslov naslov;
     //private String odpiralni_cas;
     private ArrayList<OdpiralniCas> odpiralniCas;
     private String telefon;
+
+    public Naslov getNaslov() {
+        return naslov;
+    }
+
+    public void setNaslov(Naslov naslov) {
+        this.naslov = naslov;
+    }
+
     private String mail;
    // private VrstaOdpadkovList vrstaOdpadkovList;
 
@@ -25,13 +36,14 @@ public class Lokacija {
                 ", x=" + x +
                 ", y=" + y +
                 ", naziv='" + naziv + '\'' +
+                ", naslov=" + naslov +
                 ", odpiralniCas=" + odpiralniCas +
                 ", telefon='" + telefon + '\'' +
                 ", mail='" + mail + '\'' +
                 '}';
     }
 
-    public Lokacija(double x, double y, String naziv, ArrayList<OdpiralniCas> odpiralniCas, String telefon, String mail) {
+    public Lokacija(double x, double y, String naziv, ArrayList<OdpiralniCas> odpiralniCas, String telefon, String mail, Naslov naslov) {
         this.id = UUID.randomUUID().toString().replaceAll("-", "");
         this.x = x;
         this.y = y;
@@ -39,7 +51,7 @@ public class Lokacija {
         this.odpiralniCas = odpiralniCas;
         this.telefon = telefon;
         this.mail = mail;
-
+        this.naslov = naslov;
     }
 
     public String getId() {

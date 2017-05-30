@@ -97,7 +97,8 @@ public class ActivityMap extends Activity {
         //items.add(new OverlayItem(app.getLocation(0).getNaziv(),app.getLocation(0).getNaziv(),new GeoPoint(app.getLocation(0).getX(),app.getLocation(0).getY())));
 
         for(int i=0;i < app.getLocationArraySize();i++){
-            items.add(new OverlayItem(app.getLocation(i).getNaziv(),app.getLocation(i).getNaziv(),new GeoPoint(app.getLocation(i).getX(),app.getLocation(i).getY())));
+            String tmp = app.getLocation(i).getNaslov().getNaslov() + " " + app.getLocation(i).getNaslov().getHisnaSt();
+            items.add(new OverlayItem(app.getLocation(i).getNaziv(),tmp ,new GeoPoint(app.getLocation(i).getX(),app.getLocation(i).getY())));
         }
 
 

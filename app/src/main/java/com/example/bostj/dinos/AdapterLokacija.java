@@ -8,6 +8,7 @@ import android.location.Location;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,10 @@ import android.widget.TextView;
 
 import com.example.DataAll;
 import com.example.Lokacija;
+import com.example.bostj.dinos.eventBus.MessageEventUpdateLocation;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.Calendar;
 
@@ -29,10 +34,8 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
     DataAll all;
     Activity ac;
 
-
     public static int UPDATE_DISTANCE_IF_DIFF_IN_M=10;
     Location last;
-
 
     public void setLastLocation(Location l) {
         if (last==null) {
@@ -58,6 +61,7 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
         public TextView txtHeader;
         public TextView txtFooter;
         public TextView txtOdprto;
+        public TextView txtOdaljenost;
         public ConstraintLayout layout;
         public ImageView iv;
 
@@ -66,6 +70,7 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
             txtOdprto = (TextView) v.findViewById(R.id.txtViewOdprto);
+            txtOdaljenost = (TextView) v.findViewById(R.id.txtOdaljenost);
             layout = (ConstraintLayout) v.findViewById(R.id.layoutC);
             iv = (ImageView)v.findViewById(R.id.icon);
         }
@@ -115,7 +120,29 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
             }
         });*/
 
-        holder.txtFooter.setText("Footer: "  + trenutni.getX() + ", " +trenutni.getY() );
+        //holder.txtFooter.setText("Footer: "  + trenutni.getX() + ", " +trenutni.getY() );
+        holder.txtFooter.setText(trenutni.getNaslov().getNaslov() + " " + trenutni.getNaslov().getHisnaSt() );
+
+        //računanje razdalje
+        Location locationA = new Location("point A");
+
+        locationA.setLatitude(trenutni.getY());
+        locationA.setLongitude(trenutni.getX());
+
+        Location locationB = new Location("point B");
+
+        locationB.setLatitude(15.63962813);
+        locationB.setLongitude(46.5618236);
+        if(last != null)
+            locationB = last;
+        System.out.println("Trenutna Lokacija " + last);
+
+        double distance = locationB.distanceTo(locationA);
+
+        holder.txtOdaljenost.setText((int)distance/1000 + " km");
+        holder.txtOdaljenost.setTextColor(Color.BLUE);
+        holder.txtOdaljenost.setTypeface(null, Typeface.BOLD);
+
         Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
@@ -136,6 +163,7 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
        // holder.txtOdprto.setText("Odprto");
        // holder.txtOdprto.setTextColor(Color.GREEN);
     }
+
 
 
     @Override

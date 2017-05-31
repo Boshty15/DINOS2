@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class ActivityLokacija extends AppCompatActivity {
     ImageView ivSlika;
     TextView txtMail;
     TextView txtTelefon;
+    TextView txtNaslov;
     EditText edOpriralniCas;
     EditText edName;
     TextView txtStatus;
@@ -49,6 +51,7 @@ public class ActivityLokacija extends AppCompatActivity {
         edOpriralniCas = (EditText)findViewById(R.id.editTextMultiODPIRALNI);
         edName = (EditText)findViewById(R.id.editTextName);
         txtStatus = (TextView)findViewById(R.id.textViewStatus);
+        txtNaslov = (TextView)findViewById((R.id.txtNaslov));
         update(app.getTestLocation());
     }
     void setLokacija(String ID) {
@@ -102,6 +105,9 @@ public class ActivityLokacija extends AppCompatActivity {
             }
         }
         txtStatus.setTextSize(20);
+        txtNaslov.setText(l.getNaslov().getNaslov() + " " + l.getNaslov().getHisnaSt() + ", " + l.getNaslov().getPostnaSt() + " " + l.getNaslov().getPosta());
+
+        txtNaslov.setTypeface(null, Typeface.BOLD);
     }
     public void onClickCall(View v) {
         System.out.printf("Call click");

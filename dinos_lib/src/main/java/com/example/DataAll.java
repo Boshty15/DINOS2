@@ -40,7 +40,7 @@ public class DataAll {
     public void addVrstaOdpadkov(){
         this.vrstaOdpadkovList = new ArrayList<>();
         vrstaOdpadkovList.add(new VrstaOdpadkov("1","Papir",20));
-        vrstaOdpadkovList.add(new VrstaOdpadkov("2","Železo",30));
+        vrstaOdpadkovList.add(new VrstaOdpadkov("2","?elezo",30));
         vrstaOdpadkovList.add(new VrstaOdpadkov("3","Baker",100));
         vrstaOdpadkovList.add(new VrstaOdpadkov("4","Plastika",26));
         vrstaOdpadkovList.add(new VrstaOdpadkov("5","Akumulatorji",120));
@@ -98,31 +98,31 @@ public class DataAll {
         DataAll da = new DataAll();
         da.addOdpiralniCas();
         Lokacija tmp;
-        tmp = da.addLocation(46.39006397823504,14.295007067649863,"Ljubljana Dinos",da.odpiralniCas, "0038615610630","info@dinos.si","Šlandrova ulica","6",1000,"Ljubljana");
+        tmp = da.addLocation(46.39006397823504,14.295007067649863,"Ljubljana Dinos",da.odpiralniCas, "0038615610630","info@dinos.si","?landrova ulica","6",1000,"Ljubljana");
         da.addLocation(46.249529,15.2505651,"Celje Dinos",da.odpiralniCas, "0038634266485","infoCE@dinos.si","Gaji","37",3000,"Celje");
-        da.addLocation(46.5239278,15.6546989,"Maribor Dinos",da.odpiralniCas, "0038623201755","infoCE@dinos.si","Tržaška cesta","55",2000,"Maribor");
+        da.addLocation(46.5239278,15.6546989,"Maribor Dinos",da.odpiralniCas, "0038623201755","infoCE@dinos.si","Tr?a?ka cesta","55",2000,"Maribor");
         da.addLocation(46.2560064,14.3196523,"Center za predelavo Naklo",da.odpiralniCas, "00386 4 255 94 90","infoNaklo@dinos.si","Cesta na Okroglo","9",4202,"Naklo");
-        da.addLocation(45.527268,13.735005,"Skladisce Koper",da.odpiralniCas, "00386 5 625 17 20\n","infoKP@dinos.si","Šmarska cesta","7",6001,"Koper");
+        da.addLocation(45.527268,13.735005,"Skladisce Koper",da.odpiralniCas, "00386 5 625 17 20\n","infoKP@dinos.si","?marska cesta","7",6001,"Koper");
         da.addLocation(46.5492122,16.4505,"Skladisce Lendava",da.odpiralniCas, "00386 2 575 10 27","infoLendava@dinos.si","Trimlini ","1",9220,"Lendava");
 
-        da.addLocation(46.6682993,16.1742097,"Skladišče Murska Sobota",da.odpiralniCas, "00386 2 524 14 80","infoKP@dinos.si","Markišavska ","7",9000,"Murska Sobota");
-        da.addLocation(46.0982974,14.5328824,"Skladišče Ptuj",da.odpiralniCas, "00386 2 77 23 901","infoKP@dinos.si","Špindlerjeva ulica","21",2250,"Ptuj");
-        da.addLocation(46.3440159,15.4361028,"Skladišče Slovenske Konjice",da.odpiralniCas, "00386 3 758 04 50","infoKP@dinos.si","Ob potoku","9",3210,"Slovenjske Konjice");
-        da.addLocation(46.573341,15.02767,"Skladišče Dravograd",da.odpiralniCas, "00386 2 87 87 400","infoKP@dinos.si","Otiški vrh","25E",2373,"Šentjanž pri Dravogradu");
+        da.addLocation(46.6682993,16.1742097,"Skladi??e Murska Sobota",da.odpiralniCas, "00386 2 524 14 80","infoKP@dinos.si","Marki?avska ","7",9000,"Murska Sobota");
+        da.addLocation(46.0982974,14.5328824,"Skladi??e Ptuj",da.odpiralniCas, "00386 2 77 23 901","infoKP@dinos.si","?pindlerjeva ulica","21",2250,"Ptuj");
+        da.addLocation(46.3440159,15.4361028,"Skladi??e Slovenske Konjice",da.odpiralniCas, "00386 3 758 04 50","infoKP@dinos.si","Ob potoku","9",3210,"Slovenjske Konjice");
+        da.addLocation(46.573341,15.02767,"Skladi??e Dravograd",da.odpiralniCas, "00386 2 87 87 400","infoKP@dinos.si","Oti?ki vrh","25E",2373,"?entjan? pri Dravogradu");
 
-        da.addLocation(46.3659898,15.0993767,"Skladišče Velenje",da.odpiralniCas, "00386 3 586 64 47","infoKP@dinos.si","Simona Blatnika","9",3320,"Velenje");
-        da.addLocation(46.1517179,15.0434964,"Skladišče Trbovlje",da.odpiralniCas, "00 386 3 562 57 70","infoKP@dinos.si","Globušak ","3",1420,"Trbovlje");
-        da.addLocation(46.0982974,14.5328824,"Skladišče Sevnica",da.odpiralniCas, "00386 7 814 44 23","infoKP@dinos.si","Hermanova cesta","BŠ",8920,"Sevnica");
-        da.addLocation(45.9237336,15.5881923,"Skladišče Brežice",da.odpiralniCas, "00386 7 496 12 49","infoKP@dinos.si","Cesta bratov Cerjak","38",8250,"Brežice");
+        da.addLocation(46.3659898,15.0993767,"Skladi??e Velenje",da.odpiralniCas, "00386 3 586 64 47","infoKP@dinos.si","Simona Blatnika","9",3320,"Velenje");
+        da.addLocation(46.1517179,15.0434964,"Skladi??e Trbovlje",da.odpiralniCas, "00 386 3 562 57 70","infoKP@dinos.si","Globu?ak ","3",1420,"Trbovlje");
+        da.addLocation(46.0982974,14.5328824,"Skladi??e Sevnica",da.odpiralniCas, "00386 7 814 44 23","infoKP@dinos.si","Hermanova cesta","B?",8920,"Sevnica");
+        da.addLocation(45.9237336,15.5881923,"Skladi??e Bre?ice",da.odpiralniCas, "00386 7 496 12 49","infoKP@dinos.si","Cesta bratov Cerjak","38",8250,"Bre?ice");
 
-        da.addLocation(45.8190716,15.1546571,"Skladišče Novo mesto",da.odpiralniCas, "00386 7 337 96 40","infoKP@dinos.si","Ljubljanska ","35",8000,"Novo mesto");
-        da.addLocation(45.5809844,15.1868632,"Skladišče Črnomelj",da.odpiralniCas, "00386 7 305 18 90","infoKP@dinos.si","Semiška ulica","6",8340,"Črnomelj");
-        da.addLocation(46.0982974,14.5328824,"Skladišče Kočevje",da.odpiralniCas, "00386 7 491 12 49","infoKP@dinos.si","Novomeška cesta","BŠ",1330,"Kočevje");
-        da.addLocation(46.2244925,14.3637481,"Skladišče Kranj",da.odpiralniCas, "00386 4 201 44 51","infoKP@dinos.si","Savska Loka","24",4000,"Kranj");
+        da.addLocation(45.8190716,15.1546571,"Skladi??e Novo mesto",da.odpiralniCas, "00386 7 337 96 40","infoKP@dinos.si","Ljubljanska ","35",8000,"Novo mesto");
+        da.addLocation(45.5809844,15.1868632,"Skladi??e ?rnomelj",da.odpiralniCas, "00386 7 305 18 90","infoKP@dinos.si","Semi?ka ulica","6",8340,"?rnomelj");
+        da.addLocation(46.0982974,14.5328824,"Skladi??e Ko?evje",da.odpiralniCas, "00386 7 491 12 49","infoKP@dinos.si","Novome?ka cesta","B?",1330,"Ko?evje");
+        da.addLocation(46.2244925,14.3637481,"Skladi??e Kranj",da.odpiralniCas, "00386 4 201 44 51","infoKP@dinos.si","Savska Loka","24",4000,"Kranj");
 
-        da.addLocation(46.4365546,14.0415793,"Skladišče Jesenice",da.odpiralniCas, "00386 4 583 51 90","infoKP@dinos.si","Kurilniška ","18",4270,"Jesenice");
-        da.addLocation(46.0982974,14.5328824,"Skladišče Idrija",da.odpiralniCas, "00386 4 201 44 51","infoKP@dinos.si","Vojkova ","9",5280,"Idrija");
-        da.addLocation(45.9666979,13.640705,"Skladišče Nova Gorica",da.odpiralniCas, "00386 5 300 55 86","infoKP@dinos.si","Cesta IX Korpus","110",5000,"Nova Gorica");
+        da.addLocation(46.4365546,14.0415793,"Skladi??e Jesenice",da.odpiralniCas, "00386 4 583 51 90","infoKP@dinos.si","Kurilni?ka ","18",4270,"Jesenice");
+        da.addLocation(46.0982974,14.5328824,"Skladi??e Idrija",da.odpiralniCas, "00386 4 201 44 51","infoKP@dinos.si","Vojkova ","9",5280,"Idrija");
+        da.addLocation(45.9666979,13.640705,"Skladi??e Nova Gorica",da.odpiralniCas, "00386 5 300 55 86","infoKP@dinos.si","Cesta IX Korpus","110",5000,"Nova Gorica");
 
         da.userMe = new User("Bostjan@Kostomaj.org", "Bostjan", "Bostjan", "Kostomaj", "Kocbekova cesta 22", "3202 Ljubecna");
         //da.lokacijaList = new ArrayList<Lokacija>();

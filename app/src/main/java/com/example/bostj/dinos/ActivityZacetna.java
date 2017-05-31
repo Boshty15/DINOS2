@@ -89,6 +89,7 @@ public class ActivityZacetna extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        app.save();
         getPermissions();
 
     }
@@ -100,7 +101,7 @@ public class ActivityZacetna extends AppCompatActivity {
         app = (ApplicationMy)getApplication();
         setContentView(R.layout.activity_zacetna);
         startService(new Intent(app, GPSLocation.class));
-
+        app.save();
     }
 
     public  void onClickLokacije(View v){

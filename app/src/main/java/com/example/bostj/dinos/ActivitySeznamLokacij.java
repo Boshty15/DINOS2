@@ -55,6 +55,8 @@ public class ActivitySeznamLokacij extends AppCompatActivity {
         app.sortChangeAndUpdate();
         mAdapter.notifyDataSetChanged();
 
+        startService(new Intent(app,GPSLocation.class));
+
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this);
 
@@ -64,5 +66,7 @@ public class ActivitySeznamLokacij extends AppCompatActivity {
         super.onResume();
         mAdapter.notifyDataSetChanged();
     }
-
+    public Location getLocation() {
+        return mLocation;
+    }
 }

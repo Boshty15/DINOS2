@@ -32,7 +32,8 @@ import static java.lang.Math.abs;
 
 public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHolder> {
     DataAll all;
-    Activity ac;
+    //Activity ac;
+    ActivitySeznamLokacij ac;
 
     public static int UPDATE_DISTANCE_IF_DIFF_IN_M=10;
     Location last;
@@ -50,7 +51,7 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
         }
     }
 
-    public AdapterLokacija(DataAll all, Activity ac) {
+    public AdapterLokacija(DataAll all, ActivitySeznamLokacij ac) {
         this.all = all;
         this.ac = ac;
     }
@@ -142,6 +143,31 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
         holder.txtOdaljenost.setText((int)distance/1000 + " km");
         holder.txtOdaljenost.setTextColor(Color.BLUE);
         holder.txtOdaljenost.setTypeface(null, Typeface.BOLD);
+
+ /*       if (last==null) holder.txtOdaljenost.setText("N/A");
+        //else  holder.txtOdaljenost.setText(Util.getDistanceInString(ac.getLocation().getLatitude(), ac.getLocation().getLongitude(),trenutni.getX(),trenutni.getY()));
+        else  {
+
+            Location locationA = new Location("point A");
+
+            locationA.setLatitude(trenutni.getY());
+            locationA.setLongitude(trenutni.getX());
+
+            Location locationB = new Location("point B");
+
+            locationB.setLatitude(ac.getLocation().getLatitude());
+            locationB.setLongitude(ac.getLocation().getLongitude());
+            if(last != null)
+                locationB = last;
+            System.out.println("Trenutna Lokacija " + last);
+
+            double distance = locationB.distanceTo(locationA);
+
+            holder.txtOdaljenost.setText((int)distance/1000 + " km");
+            holder.txtOdaljenost.setTextColor(Color.BLUE);
+            holder.txtOdaljenost.setTypeface(null, Typeface.BOLD);
+        }
+*/
 
         Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);

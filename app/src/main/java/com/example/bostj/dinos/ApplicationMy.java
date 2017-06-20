@@ -40,6 +40,7 @@ public class ApplicationMy extends Application {
     private static final String TAG = ApplicationMy.class.getCanonicalName() ;
     int x;
     DataAll a;
+
     private static final String DATA_MAP = "dinosmap";
     private static final String FILE_NAME = "dinos.json";
     Location mLastLocation;
@@ -65,9 +66,13 @@ public class ApplicationMy extends Application {
             a= DataAll.scenarijA();
         }
         a= DataAll.scenarijA();
+
+
+
         mLastLocation=null;
         if (!EventBus.getDefault().isRegistered(this))
             EventBus.getDefault().register(this);
+
     }
 
     @Override
@@ -130,6 +135,9 @@ public class ApplicationMy extends Application {
         if (tmp!=null) a = tmp;
         else return false;
         return true;
+    }
+    public Location getLocation() {
+        return mLastLocation;
     }
     public void sortUpdate() {
 

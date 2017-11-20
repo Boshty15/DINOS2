@@ -6,7 +6,6 @@ package com.example;
 
 public class VrstaOdpadkaCenaKolicina {
     private VrstaOdpadkov name;
-    private double cena;
     private double kolicina;
 
 
@@ -14,7 +13,6 @@ public class VrstaOdpadkaCenaKolicina {
     public String toString() {
         return "VrstaOdpadkaCenaKolicina{" +
                 "vrstaOdpadkov=" + name +
-                ", cena=" + cena +
                 ", kolicina=" + kolicina +
                 '}';
     }
@@ -27,13 +25,6 @@ public class VrstaOdpadkaCenaKolicina {
         this.name = name;
     }
 
-    public double getCena() {
-        return cena;
-    }
-
-    public void setCena(double cena) {
-        this.cena = cena;
-    }
 
     public double getKolicina() {
         return kolicina;
@@ -43,10 +34,9 @@ public class VrstaOdpadkaCenaKolicina {
         this.kolicina = kolicina;
     }
 
-    public VrstaOdpadkaCenaKolicina(VrstaOdpadkov name, double cena, double kolicina) {
+    public VrstaOdpadkaCenaKolicina(VrstaOdpadkov name, double kolicina) {
 
         this.name = name;
-        this.cena = cena;
         this.kolicina = kolicina;
     }
 }

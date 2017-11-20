@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.bostj.dinos.eventBus.MessageEventUpdateLocation;
@@ -35,7 +37,27 @@ public class ActivitySeznamLokacij extends AppCompatActivity {
         mAdapter.setLastLocation(mLocation);
         mAdapter.notifyDataSetChanged();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.my_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                // User chose the "Settings" item, show the app settings UI...
+                startActivity(new Intent(this,ActivityMySettings.class));
+                return true;
+            case R.id.actionSortiranje:
+                startActivity(new Intent(this, ActivitySortiranje.class));
+                return true;
 
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

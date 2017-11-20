@@ -41,8 +41,8 @@ public class ApplicationMy extends Application {
     int x;
     DataAll a;
 
-    private static final String DATA_MAP = "dinosmap";
-    private static final String FILE_NAME = "dinos.json";
+    private static final String DATA_MAP = "smetimapa";
+    private static final String FILE_NAME = "smeti.json";
     Location mLastLocation;
 
     @Subscribe
@@ -162,5 +162,15 @@ public class ApplicationMy extends Application {
         sortUpdate();
     }
 
+    public void addItemToKosarica(VrstaOdpadkov vrsta, double kolicina){
+        a.addItemToKosarica(vrsta,kolicina);
+    }
+    public VrstaOdpadkov getVrstaOdpadkovFromIndex(int index){
+        return a.getVrstaOdpadkovFromIndex(index);
+    }
+    public int getIndexOdpadekName(String name){
+
+        return a.getIndexOdpadekName(name);
+    }
 
 }

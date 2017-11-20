@@ -87,13 +87,13 @@ public class ActivityOdpadek extends AppCompatActivity {
 
     private void update(VrstaOdpadkov l) {
         edName.setText(l.getOdpadek());
-        edCena.setText(l.getCena() + "");
     }
     public  void onClickAddKosarica(View v){
         //VrstaOdpadkaCenaKolicina tmp = new VrstaOdpadkaCenaKolicina(, Double.parseDouble(edCena.getText().toString()), Double.parseDouble(editTextCena.getText().toString()));
-        Intent i = new Intent(getBaseContext(),ActivityVrstaOdpadkovList.class);
-        startActivity(i);
+        /*Intent i = new Intent(getBaseContext(),ActivityVrstaOdpadkovList.class);
+        startActivity(i);*/
 
+        app.addItemToKosarica(app.getVrstaOdpadkovFromIndex(app.getIndexOdpadekName(edName.getText().toString())), Double.parseDouble(editTextCena.getText().toString()));
 
     }
 

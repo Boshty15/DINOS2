@@ -16,6 +16,7 @@ public class Lokacija {
     //private String odpiralni_cas;
     private ArrayList<OdpiralniCas> odpiralniCas;
     private String telefon;
+    private String podjetje;
 
     public Naslov getNaslov() {
         return naslov;
@@ -43,7 +44,8 @@ public class Lokacija {
                 '}';
     }
 
-    public Lokacija(double x, double y, String naziv, ArrayList<OdpiralniCas> odpiralniCas, String telefon, String mail, Naslov naslov) {
+    public Lokacija(double x, double y, String naziv, ArrayList<OdpiralniCas> odpiralniCas, String telefon, String mail, Naslov naslov, String podjetje) {
+        this.podjetje = podjetje;
         this.id = UUID.randomUUID().toString().replaceAll("-", "");
         this.x = x;
         this.y = y;
@@ -143,4 +145,11 @@ public class Lokacija {
         return 0;
     }
 
+    public void setPodjetje(String podjetje) {
+        this.podjetje = podjetje;
+    }
+
+    public String getPodjetje() {
+        return podjetje;
+    }
 }

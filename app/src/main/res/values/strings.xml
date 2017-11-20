@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dinos</string>
+    <string name="app_name">Smeti</string>
     <string name="title_activity_zacetna">ActivityZacetna</string>
     <string name="datum">Datum:</string>
     <string name="mapa">Mapa</string>

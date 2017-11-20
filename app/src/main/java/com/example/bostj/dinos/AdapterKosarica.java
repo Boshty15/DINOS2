@@ -43,7 +43,7 @@ public class AdapterKosarica extends RecyclerView.Adapter<AdapterKosarica.ViewHo
     }
     @Override
     public AdapterKosarica.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayoutodpadki, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayoutkkosarica, parent, false);
 
         // set the view's size, margins, paddings and layout parameters
         AdapterKosarica.ViewHolder vh = new AdapterKosarica.ViewHolder(v);
@@ -81,8 +81,7 @@ public class AdapterKosarica extends RecyclerView.Adapter<AdapterKosarica.ViewHo
                 AdapterOdpadki.startDView(trenutni.getId(),ac);
             }
         });
-*/
-        holder.txtFooter.setText("Cena: " + trenutni.getCena() + " Količina: "+ trenutni.getKolicina());
+*/  holder.txtFooter.setText( "Količina: "+ trenutni.getKolicina());
 
     }
 

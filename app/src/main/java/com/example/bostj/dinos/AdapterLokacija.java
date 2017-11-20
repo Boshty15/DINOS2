@@ -97,7 +97,17 @@ public class AdapterLokacija extends RecyclerView.Adapter<AdapterLokacija.ViewHo
         final String name = trenutni.getNaziv();
         holder.txtHeader.setText(trenutni.getNaziv());
         System.out.println("aaaa " + trenutni.getNaziv());
-        holder.iv.setImageDrawable(this.  ac.getDrawable(R.mipmap.ic_launcher));
+
+        if(trenutni.getPodjetje().equals("dinos")){
+            holder.iv.setImageDrawable(this.  ac.getDrawable(R.mipmap.ic_launcher));
+        }
+        if(trenutni.getPodjetje().equals("surovina")){
+            holder.iv.setImageDrawable(this.  ac.getDrawable(R.mipmap.ic_surovina_logo));
+        }
+        if(trenutni.getPodjetje().equals("odpad")){
+            holder.iv.setImageDrawable(this. ac.getDrawable(R.mipmap.ic_odpad_logo));
+        }
+
 
         if (position%2==1) {
             //holder.txtHeader.setTextColor(Color.BLUE);

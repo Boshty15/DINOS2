@@ -82,7 +82,15 @@ public class ActivityZacetna extends AppCompatActivity {
                 .withPermissions(
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
+                        //TODO narediti permission za ostale stvari
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_WIFI_STATE,
+                        Manifest.permission.ACCESS_NETWORK_STATE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.CALL_PHONE
+
                 ).withListener(my).check();
     }
 
@@ -90,7 +98,7 @@ public class ActivityZacetna extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         app.save();
-        getPermissions();
+        //getPermissions();
 
     }
 

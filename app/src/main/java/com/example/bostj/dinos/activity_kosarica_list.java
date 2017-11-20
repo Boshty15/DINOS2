@@ -54,7 +54,7 @@ public class activity_kosarica_list extends AppCompatActivity {
         double tmp = 0;
         for (int i = 0; i < app.getSize(); i++) {
             //tmp += 50;
-            tmp += app.getItem(i).getCena();
+            tmp += app.getItem(i).getKolicina();
         }
         txtViewSkupajCena.setText(tmp + "");
         setDeleteOnSwipe(mRecyclerView);

@@ -30,13 +30,13 @@ public class AdapterOdpadki extends RecyclerView.Adapter<AdapterOdpadki.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtHeader;
-        public TextView txtFooter;
+       // public TextView txtFooter;
         public ImageView iv;
 
         public ViewHolder(View v) {
             super(v);
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+         //   txtFooter = (TextView) v.findViewById(R.id.secondLine);
             iv = (ImageView)v.findViewById(R.id.icon);
         }
     }
@@ -64,7 +64,7 @@ public class AdapterOdpadki extends RecyclerView.Adapter<AdapterOdpadki.ViewHold
         if (position%2==1) {
             //holder.txtHeader.setTextColor(Color.BLUE);
             holder.txtHeader.setTypeface(null, Typeface.BOLD);
-            holder.txtFooter.setTypeface(null, Typeface.BOLD);
+            //holder.txtFooter.setTypeface(null, Typeface.BOLD);
 
 
         }
@@ -74,14 +74,14 @@ public class AdapterOdpadki extends RecyclerView.Adapter<AdapterOdpadki.ViewHold
                 AdapterOdpadki.startDView(trenutni.getId(),ac);
             }
         });
-        holder.txtFooter.setOnClickListener(new View.OnClickListener() {
+        /*holder.txtFooter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AdapterOdpadki.startDView(trenutni.getId(),ac);
             }
-        });
+        });*/
 
-        holder.txtFooter.setText("Cena/t: " +trenutni.getCena() );
+        //holder.txtFooter.setText("Cena/t: " +trenutni.getCena() );
 
     }
 
@@ -90,6 +90,5 @@ public class AdapterOdpadki extends RecyclerView.Adapter<AdapterOdpadki.ViewHold
     public int getItemCount() {
         return all.getVrstaOdpadkovSize();
     }
-
 
 }

@@ -7,12 +7,10 @@ package com.example;
 public class VrstaOdpadkov {
     private String id;
     private String odpadek;
-    private double cena;
 
-    public VrstaOdpadkov(String id, String odpadek, double cena) {
+    public VrstaOdpadkov(String id, String odpadek) {
         this.id = id;
         this.odpadek = odpadek;
-        this.cena = cena;
     }
 
     @Override
@@ -20,7 +18,6 @@ public class VrstaOdpadkov {
         return "VrstaOdpadkov{" +
                 "id=" + id +
                 ", odpadek='" + odpadek + '\'' +
-                ", cena=" + cena +
                 '}';
     }
 
@@ -38,13 +35,5 @@ public class VrstaOdpadkov {
 
     public void setOdpadek(String odpadek) {
         this.odpadek = odpadek;
-    }
-
-    public double getCena() {
-        return cena;
-    }
-
-    public void setCena(double cena) {
-        this.cena = cena;
     }
 }

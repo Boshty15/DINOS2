@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.example.VrstaOdpadkov;
+
 public class ActivityVrstaOdpadkovList extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -36,7 +38,7 @@ public class ActivityVrstaOdpadkovList extends AppCompatActivity {
     }
     public  void onClickKosarica(View v){
         //dodati izdelek v košarico
-        
+
 
         Intent i = new Intent(getBaseContext(),activity_kosarica_list.class);
         startActivity(i);

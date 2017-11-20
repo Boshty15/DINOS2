@@ -108,6 +108,16 @@ public class ActivityLokacija extends AppCompatActivity {
         txtNaslov.setText(l.getNaslov().getNaslov() + " " + l.getNaslov().getHisnaSt() + ", " + l.getNaslov().getPostnaSt() + " " + l.getNaslov().getPosta());
 
         txtNaslov.setTypeface(null, Typeface.BOLD);
+
+        if(l.getPodjetje().equals("dinos")){
+            ivSlika.setImageDrawable(this. getDrawable(R.mipmap.ic_launcher));
+        }
+        if(l.getPodjetje().equals("surovina")){
+            ivSlika.setImageDrawable(this. getDrawable(R.mipmap.ic_surovina_logo));
+        }
+        if(l.getPodjetje().equals("odpad")){
+            ivSlika.setImageDrawable(this. getDrawable(R.mipmap.ic_odpad_logo));
+        }
     }
     public void onClickCall(View v) {
         System.out.printf("Call click");
